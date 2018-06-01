@@ -45,13 +45,13 @@ Partial Class SgrMnr
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.resultsgrid = New System.Windows.Forms.DataGridView()
         Me.crntratiobox = New System.Windows.Forms.TextBox()
         Me.ratiolbl = New System.Windows.Forms.Label()
         Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lstInput1 = New System.Windows.Forms.ListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.tpleftpane.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.resultsgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sgrbox
@@ -250,14 +250,6 @@ Partial Class SgrMnr
         Me.Label9.Text = "calendar to function as a jump to point in database by date to display that date " &
     "only"
         '
-        'resultsgrid
-        '
-        Me.resultsgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.resultsgrid.Location = New System.Drawing.Point(31, 366)
-        Me.resultsgrid.Name = "resultsgrid"
-        Me.resultsgrid.Size = New System.Drawing.Size(768, 244)
-        Me.resultsgrid.TabIndex = 21
-        '
         'crntratiobox
         '
         Me.crntratiobox.Location = New System.Drawing.Point(17, 72)
@@ -280,12 +272,30 @@ Partial Class SgrMnr
         Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.SettingsToolStripMenuItem1.Text = "Settings"
         '
+        'lstInput1
+        '
+        Me.lstInput1.FormattingEnabled = True
+        Me.lstInput1.Location = New System.Drawing.Point(186, 437)
+        Me.lstInput1.Name = "lstInput1"
+        Me.lstInput1.Size = New System.Drawing.Size(408, 173)
+        Me.lstInput1.TabIndex = 21
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(333, 386)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'SgrMnr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 622)
-        Me.Controls.Add(Me.resultsgrid)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lstInput1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.preventrylbl)
@@ -300,7 +310,6 @@ Partial Class SgrMnr
         Me.tpleftpane.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.resultsgrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -327,8 +336,9 @@ Partial Class SgrMnr
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents resultsgrid As DataGridView
     Friend WithEvents ratiolbl As Label
     Friend WithEvents crntratiobox As TextBox
     Friend WithEvents SettingsToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents lstInput1 As ListBox
+    Friend WithEvents Button1 As Button
 End Class
