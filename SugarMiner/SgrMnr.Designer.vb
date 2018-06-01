@@ -172,7 +172,7 @@ Partial Class SgrMnr
         Me.tpleftpane.Controls.Add(Me.DateTimePicker1)
         Me.tpleftpane.Location = New System.Drawing.Point(31, 66)
         Me.tpleftpane.Name = "tpleftpane"
-        Me.tpleftpane.Size = New System.Drawing.Size(480, 113)
+        Me.tpleftpane.Size = New System.Drawing.Size(480, 162)
         Me.tpleftpane.TabIndex = 16
         '
         'Label8
@@ -180,10 +180,9 @@ Partial Class SgrMnr
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(3, 92)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(454, 13)
+        Me.Label8.Size = New System.Drawing.Size(454, 52)
         Me.Label8.TabIndex = 20
-        Me.Label8.Text = "using labels same as database table fields refresh button will query database and" &
-    " refresh results"
+        Me.Label8.Text = resources.GetString("Label8.Text")
         '
         'refrshbtn
         '
