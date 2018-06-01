@@ -103,7 +103,7 @@ Public Class SgrMnr
         Dim conn = New SQLiteConnection("Data Source=SugarDB.sqlite;Version=3")
         conn.Open()
 
-        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING, ratio BLOB)"
+        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING, ratio INT)"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
 
         Try
