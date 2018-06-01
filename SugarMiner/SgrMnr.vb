@@ -68,8 +68,8 @@ Public Class SgrMnr
 
         End Try
 
-        '====================================================values need to be entered from input boxes from date, time, sugar, carbs, insulin
-        '====================================================ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
+        'values need to be entered from input boxes from date, time, sugar, carbs, insulin
+        'ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
         Dim sugars As Integer = Integer.Parse(sgrbox.Text)
         Dim carbs As Integer = Integer.Parse(carbox.Text)
         Dim insulin As Integer = Integer.Parse(insulinbox.Text)
@@ -79,7 +79,7 @@ Public Class SgrMnr
         dbCommand.CommandText = String.Format(sql, sugars, carbs, insulin, datetime)
         dbCommand.ExecuteNonQuery()
 
-        '====================================================in product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
+        'end product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
 
         sql = "SELECT * FROM Sugars order by sugar desc"
         dbCommand.CommandText = sql
@@ -112,8 +112,8 @@ Public Class SgrMnr
 
         End Try
 
-        '====================================================values need to be entered from input boxes from date, time, sugar, carbs, insulin
-        '====================================================ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
+        'values need to be entered from input boxes from date, time, sugar, carbs, insulin
+        'ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
         Dim sugars As Integer = Integer.Parse(sgrbox.Text)
         Dim carbs As Integer = Integer.Parse(carbox.Text)
         Dim insulin As Integer = Integer.Parse(insulinbox.Text)
@@ -123,7 +123,7 @@ Public Class SgrMnr
         dbCommand.CommandText = String.Format(sql, sugars, carbs, insulin, datetime)
         dbCommand.ExecuteNonQuery()
 
-        '====================================================in product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
+        'end product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
 
         sql = "SELECT * FROM Sugars order by datetime desc"
         dbCommand.CommandText = sql
