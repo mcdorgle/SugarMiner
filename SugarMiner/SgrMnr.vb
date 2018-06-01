@@ -1,4 +1,8 @@
-﻿Imports System.Data.SQLite
+﻿'Sugar Miner developed by Deshi McDorgle for diabetics to more closely monitor blood sugar levels when using an insulin to carb ratio rather than sliding scale
+'program is not yet functional
+'I sit on freenode irc #web-social and #thelair
+'also working on bluetooth capabilities for MedTronic insulin pump systems
+Imports System.Data.SQLite
 
 Public Class SgrMnr
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles sugrlbl.Click
