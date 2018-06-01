@@ -36,20 +36,17 @@ Partial Class SgrMnr
         Me.addsgrbtn = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.tpleftpane = New System.Windows.Forms.Panel()
+        Me.ratiolbl = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.crntratiobox = New System.Windows.Forms.TextBox()
         Me.refrshbtn = New System.Windows.Forms.Button()
         Me.preventrylbl = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.crntratiobox = New System.Windows.Forms.TextBox()
-        Me.ratiolbl = New System.Windows.Forms.Label()
-        Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lstInput1 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.list1 = New System.Windows.Forms.ListBox()
         Me.tpleftpane.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -176,14 +173,31 @@ Partial Class SgrMnr
         Me.tpleftpane.Size = New System.Drawing.Size(480, 162)
         Me.tpleftpane.TabIndex = 16
         '
+        'ratiolbl
+        '
+        Me.ratiolbl.AutoSize = True
+        Me.ratiolbl.Location = New System.Drawing.Point(123, 74)
+        Me.ratiolbl.Name = "ratiolbl"
+        Me.ratiolbl.Size = New System.Drawing.Size(32, 13)
+        Me.ratiolbl.TabIndex = 23
+        Me.ratiolbl.Text = "Ratio"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 92)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(14, 120)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(454, 52)
+        Me.Label8.Size = New System.Drawing.Size(449, 15)
         Me.Label8.TabIndex = 20
-        Me.Label8.Text = resources.GetString("Label8.Text")
+        Me.Label8.Text = "Enter your numbers and then click add to add them to the records log"
+        '
+        'crntratiobox
+        '
+        Me.crntratiobox.Location = New System.Drawing.Point(17, 72)
+        Me.crntratiobox.Name = "crntratiobox"
+        Me.crntratiobox.Size = New System.Drawing.Size(100, 20)
+        Me.crntratiobox.TabIndex = 23
         '
         'refrshbtn
         '
@@ -198,11 +212,11 @@ Partial Class SgrMnr
         '
         Me.preventrylbl.AutoSize = True
         Me.preventrylbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.preventrylbl.Location = New System.Drawing.Point(302, 330)
+        Me.preventrylbl.Location = New System.Drawing.Point(329, 243)
         Me.preventrylbl.Name = "preventrylbl"
-        Me.preventrylbl.Size = New System.Drawing.Size(139, 20)
+        Me.preventrylbl.Size = New System.Drawing.Size(76, 20)
         Me.preventrylbl.TabIndex = 17
-        Me.preventrylbl.Text = "Previous Entries"
+        Me.preventrylbl.Text = "Records"
         '
         'MenuStrip1
         '
@@ -220,10 +234,16 @@ Partial Class SgrMnr
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'SettingsToolStripMenuItem1
+        '
+        Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
+        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem1.Text = "Settings"
+        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
@@ -232,73 +252,23 @@ Partial Class SgrMnr
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'Label7
+        'list1
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(120, 350)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(305, 13)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "display all database entries sorted by date field newest to oldest"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(429, 237)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(397, 13)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "calendar to function as a jump to point in database by date to display that date " &
-    "only"
-        '
-        'crntratiobox
-        '
-        Me.crntratiobox.Location = New System.Drawing.Point(17, 72)
-        Me.crntratiobox.Name = "crntratiobox"
-        Me.crntratiobox.Size = New System.Drawing.Size(100, 20)
-        Me.crntratiobox.TabIndex = 23
-        '
-        'ratiolbl
-        '
-        Me.ratiolbl.AutoSize = True
-        Me.ratiolbl.Location = New System.Drawing.Point(123, 74)
-        Me.ratiolbl.Name = "ratiolbl"
-        Me.ratiolbl.Size = New System.Drawing.Size(32, 13)
-        Me.ratiolbl.TabIndex = 23
-        Me.ratiolbl.Text = "Ratio"
-        '
-        'SettingsToolStripMenuItem1
-        '
-        Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
-        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.SettingsToolStripMenuItem1.Text = "Settings"
-        '
-        'lstInput1
-        '
-        Me.lstInput1.FormattingEnabled = True
-        Me.lstInput1.Location = New System.Drawing.Point(186, 437)
-        Me.lstInput1.Name = "lstInput1"
-        Me.lstInput1.Size = New System.Drawing.Size(408, 173)
-        Me.lstInput1.TabIndex = 21
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(333, 386)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.list1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.list1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.list1.FormattingEnabled = True
+        Me.list1.ItemHeight = 20
+        Me.list1.Location = New System.Drawing.Point(31, 266)
+        Me.list1.Name = "list1"
+        Me.list1.Size = New System.Drawing.Size(768, 344)
+        Me.list1.TabIndex = 21
         '
         'SgrMnr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 622)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.lstInput1)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.list1)
         Me.Controls.Add(Me.preventrylbl)
         Me.Controls.Add(Me.tpleftpane)
         Me.Controls.Add(Me.MonthCalendar1)
@@ -335,11 +305,8 @@ Partial Class SgrMnr
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents ratiolbl As Label
     Friend WithEvents crntratiobox As TextBox
     Friend WithEvents SettingsToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents lstInput1 As ListBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents list1 As ListBox
 End Class
