@@ -198,7 +198,7 @@ Partial Class SgrMnr
         '
         Me.preventrylbl.AutoSize = True
         Me.preventrylbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.preventrylbl.Location = New System.Drawing.Point(341, 227)
+        Me.preventrylbl.Location = New System.Drawing.Point(302, 330)
         Me.preventrylbl.Name = "preventrylbl"
         Me.preventrylbl.Size = New System.Drawing.Size(139, 20)
         Me.preventrylbl.TabIndex = 17
@@ -244,7 +244,7 @@ Partial Class SgrMnr
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(402, 259)
+        Me.Label9.Location = New System.Drawing.Point(429, 237)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(397, 13)
         Me.Label9.TabIndex = 20
@@ -271,9 +271,9 @@ Partial Class SgrMnr
         Me.ratiolbl.AutoSize = True
         Me.ratiolbl.Location = New System.Drawing.Point(123, 74)
         Me.ratiolbl.Name = "ratiolbl"
-        Me.ratiolbl.Size = New System.Drawing.Size(69, 13)
+        Me.ratiolbl.Size = New System.Drawing.Size(32, 13)
         Me.ratiolbl.TabIndex = 23
-        Me.ratiolbl.Text = "Current Ratio"
+        Me.ratiolbl.Text = "Ratio"
         '
         'SettingsToolStripMenuItem
         '
