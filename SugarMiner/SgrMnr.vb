@@ -59,7 +59,7 @@ Public Class SgrMnr
         Dim conn = New SQLiteConnection("Data Source=SugarDB.sqlite;Version=3")
         conn.Open()
 
-        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT)"
+        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING)"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
 
         Try
@@ -73,8 +73,10 @@ Public Class SgrMnr
         Dim sugars As Integer = Integer.Parse(sgrbox.Text)
         Dim carbs As Integer = Integer.Parse(carbox.Text)
         Dim insulin As Integer = Integer.Parse(insulinbox.Text)
-        sql = "INSERT INTO Sugars (sugar, carbs, insulin) values ({0}, {1}, {2})"
-        dbCommand.CommandText = String.Format(sql, sugars, carbs, insulin)
+        Dim datetime As String = DateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff")
+
+        sql = "INSERT INTO Sugars (sugar, carbs, insulin, datetime) values ({0}, {1}, {2}, '{3}')"
+        dbCommand.CommandText = String.Format(sql, sugars, carbs, insulin, datetime)
         dbCommand.ExecuteNonQuery()
 
         '====================================================in product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
@@ -85,7 +87,7 @@ Public Class SgrMnr
         Dim reader As SQLiteDataReader = dbCommand.ExecuteReader()
         lstInput1.Items.Clear()
         While (reader.Read())
-            lstInput1.Items.Add("Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
+            lstInput1.Items.Add("Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin") & "   Date:  " & reader("datetime"))
         End While
         conn.Close()
     End Sub
