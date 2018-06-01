@@ -103,7 +103,7 @@ Public Class SgrMnr
         Dim conn = New SQLiteConnection("Data Source=SugarDB.sqlite;Version=3")
         conn.Open()
 
-        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING)"
+        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING, ratio BLOB)"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
 
         Try
@@ -142,5 +142,9 @@ Public Class SgrMnr
 
     Private Sub lstInput1_SelectedIndexChanged(sender As Object, e As EventArgs)
         'this will be removed after database functionality is fully working
+    End Sub
+
+    Private Sub sgrbox_TextChanged(sender As Object, e As EventArgs) Handles sgrbox.TextChanged
+
     End Sub
 End Class
