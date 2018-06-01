@@ -31,7 +31,7 @@ Public Class SgrMnr
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
-        'displays ratio from setup page entered by user 
+        'displays ratio from settings page entered by user  not sure what type of object this should be it should not be an editable field on main form only in the settings form
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles insulinlbl.Click
@@ -81,5 +81,21 @@ Public Class SgrMnr
             lstInput1.Items.Add("Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
         End While
         conn.Close()
+    End Sub
+
+    Private Sub refrshbtn_Click(sender As Object, e As EventArgs) Handles refrshbtn.Click
+        'refresh button should refresh the display of data in the grid to show all results
+    End Sub
+
+    Private Sub addsgrbtn_Click(sender As Object, e As EventArgs) Handles addsgrbtn.Click
+        'add button will insert all entered values into database
+    End Sub
+
+    Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
+        'calendar should eventually jump to a specific entry in the database and display all results for that date into the grid but ignore the time
+    End Sub
+
+    Private Sub lstInput1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstInput1.SelectedIndexChanged
+        'this will be removed after database functionality is fully working
     End Sub
 End Class

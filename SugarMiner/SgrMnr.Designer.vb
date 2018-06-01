@@ -141,9 +141,10 @@ Partial Class SgrMnr
         '
         Me.addsgrbtn.Location = New System.Drawing.Point(378, 18)
         Me.addsgrbtn.Name = "addsgrbtn"
+        Me.addsgrbtn.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.addsgrbtn.Size = New System.Drawing.Size(75, 23)
         Me.addsgrbtn.TabIndex = 14
-        Me.addsgrbtn.Text = "Add Sugar"
+        Me.addsgrbtn.Text = "Add"
         Me.addsgrbtn.UseVisualStyleBackColor = True
         '
         'MonthCalendar1
