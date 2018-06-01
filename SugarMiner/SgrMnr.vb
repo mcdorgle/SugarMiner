@@ -60,28 +60,31 @@ Public Class SgrMnr
         conn.Open()
 
         Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT)"
-        Dim cmd1 As SQLiteCommand = New SQLiteCommand(sql, conn)
+        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
 
         Try
-            cmd1.ExecuteNonQuery()
+            dbCommand.ExecuteNonQuery()
         Catch ex As Exception
 
         End Try
 
         '====================================================values need to be entered from input boxes from date, time, sugar, carbs, insulin
         '====================================================ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
-        sql = "INSERT INTO Sugars (sugar, carbs, insulin) values (127, 43, 22)"
-        Dim cmd2 As SQLiteCommand = New SQLiteCommand(sql, conn)
-        cmd2.ExecuteNonQuery()
+        Dim sugars As Integer = Integer.Parse(sgrbox.Text)
+        Dim carbs As Integer = Integer.Parse(carbox.Text)
+        Dim insulin As Integer = Integer.Parse(insulinbox.Text)
+        sql = "INSERT INTO Sugars (sugar, carbs, insulin) values ({0}, {1}, {2})"
+        dbCommand.CommandText = String.Format(sql, sugars, carbs, insulin)
+        dbCommand.ExecuteNonQuery()
 
         '====================================================in product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
 
         sql = "SELECT * FROM Sugars order by sugar desc"
-        Dim cmd3 As SQLiteCommand = New SQLiteCommand(sql, conn)
-        Dim reader As SQLiteDataReader = cmd3.ExecuteReader()
+        dbCommand.CommandText = sql
+
+        Dim reader As SQLiteDataReader = dbCommand.ExecuteReader()
         lstInput1.Items.Clear()
         While (reader.Read())
-
             lstInput1.Items.Add("Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
         End While
         conn.Close()
