@@ -49,6 +49,7 @@ Public Class SgrMnr
         oForm = Nothing
     End Sub
 
+    '==========================================================DATABASE TEST=========================================
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim connMakeDB As SQLiteConnection = New SQLiteConnection("SugarDB.sqlite")
         Dim conn = New SQLiteConnection("Data Source=SugarDB.sqlite;Version=3")
@@ -63,12 +64,13 @@ Public Class SgrMnr
 
         End Try
 
-        '====================================================
+        '====================================================values need to be entered from input boxes from date, time, sugar, carbs, insulin
+        '====================================================ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
         sql = "INSERT INTO Sugars (sugar, carbs, insulin) values (127, 43, 22)"
         Dim cmd2 As SQLiteCommand = New SQLiteCommand(sql, conn)
         cmd2.ExecuteNonQuery()
 
-        '====================================================
+        '====================================================in product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
 
         sql = "SELECT * FROM Sugars order by sugar desc"
         Dim cmd3 As SQLiteCommand = New SQLiteCommand(sql, conn)
