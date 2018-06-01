@@ -36,7 +36,11 @@
 
     End Sub
 
-    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) 
+
+    End Sub
+
+    Private Sub SettingsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem1.Click
         Dim oForm As SettingsFrm
         oForm = New SettingsFrm()
         oForm.Show()

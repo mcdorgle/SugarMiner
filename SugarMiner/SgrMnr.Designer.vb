@@ -48,7 +48,7 @@ Partial Class SgrMnr
         Me.resultsgrid = New System.Windows.Forms.DataGridView()
         Me.crntratiobox = New System.Windows.Forms.TextBox()
         Me.ratiolbl = New System.Windows.Forms.Label()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.tpleftpane.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.resultsgrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,7 +205,7 @@ Partial Class SgrMnr
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(838, 24)
@@ -214,7 +214,7 @@ Partial Class SgrMnr
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem1, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -274,11 +274,11 @@ Partial Class SgrMnr
         Me.ratiolbl.TabIndex = 23
         Me.ratiolbl.Text = "Ratio"
         '
-        'SettingsToolStripMenuItem
+        'SettingsToolStripMenuItem1
         '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
+        Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
+        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem1.Text = "Settings"
         '
         'SgrMnr
         '
@@ -330,5 +330,5 @@ Partial Class SgrMnr
     Friend WithEvents resultsgrid As DataGridView
     Friend WithEvents ratiolbl As Label
     Friend WithEvents crntratiobox As TextBox
-    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsToolStripMenuItem1 As ToolStripMenuItem
 End Class
