@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SgrMnr
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,82 +20,87 @@ Partial Class SgrMnr
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SgrMnr))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.sgrbox = New System.Windows.Forms.TextBox()
+        Me.insulinbox = New System.Windows.Forms.TextBox()
+        Me.carbox = New System.Windows.Forms.TextBox()
+        Me.sugrlbl = New System.Windows.Forms.Label()
+        Me.carblbl = New System.Windows.Forms.Label()
+        Me.insulinlbl = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.datelbl = New System.Windows.Forms.Label()
+        Me.timelbl = New System.Windows.Forms.Label()
+        Me.timebox = New System.Windows.Forms.DateTimePicker()
+        Me.addsgrbtn = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.tpleftpane = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.refrshbtn = New System.Windows.Forms.Button()
+        Me.preventrylbl = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel2.SuspendLayout()
+        Me.resultsgrid = New System.Windows.Forms.DataGridView()
+        Me.crntratiobox = New System.Windows.Forms.TextBox()
+        Me.ratiolbl = New System.Windows.Forms.Label()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tpleftpane.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.resultsgrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'sgrbox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(193, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.sgrbox.Location = New System.Drawing.Point(193, 20)
+        Me.sgrbox.Name = "sgrbox"
+        Me.sgrbox.Size = New System.Drawing.Size(100, 20)
+        Me.sgrbox.TabIndex = 3
         '
-        'TextBox2
+        'insulinbox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(193, 69)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.insulinbox.Location = New System.Drawing.Point(193, 69)
+        Me.insulinbox.Name = "insulinbox"
+        Me.insulinbox.Size = New System.Drawing.Size(100, 20)
+        Me.insulinbox.TabIndex = 4
         '
-        'TextBox3
+        'carbox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(193, 43)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.carbox.Location = New System.Drawing.Point(193, 43)
+        Me.carbox.Name = "carbox"
+        Me.carbox.Size = New System.Drawing.Size(100, 20)
+        Me.carbox.TabIndex = 5
         '
-        'Label1
+        'sugrlbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(299, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Sugar"
+        Me.sugrlbl.AutoSize = True
+        Me.sugrlbl.Location = New System.Drawing.Point(299, 20)
+        Me.sugrlbl.Name = "sugrlbl"
+        Me.sugrlbl.Size = New System.Drawing.Size(35, 13)
+        Me.sugrlbl.TabIndex = 6
+        Me.sugrlbl.Text = "Sugar"
         '
-        'Label2
+        'carblbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(299, 43)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Carbs"
+        Me.carblbl.AutoSize = True
+        Me.carblbl.Location = New System.Drawing.Point(299, 43)
+        Me.carblbl.Name = "carblbl"
+        Me.carblbl.Size = New System.Drawing.Size(34, 13)
+        Me.carblbl.TabIndex = 7
+        Me.carblbl.Text = "Carbs"
         '
-        'Label3
+        'insulinlbl
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(299, 69)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Insulin"
+        Me.insulinlbl.AutoSize = True
+        Me.insulinlbl.Location = New System.Drawing.Point(299, 69)
+        Me.insulinlbl.Name = "insulinlbl"
+        Me.insulinlbl.Size = New System.Drawing.Size(37, 13)
+        Me.insulinlbl.TabIndex = 8
+        Me.insulinlbl.Text = "Insulin"
         '
         'DateTimePicker1
         '
@@ -105,41 +110,41 @@ Partial Class SgrMnr
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 9
         '
-        'Label4
+        'datelbl
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(123, 20)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Date"
+        Me.datelbl.AutoSize = True
+        Me.datelbl.Location = New System.Drawing.Point(123, 20)
+        Me.datelbl.Name = "datelbl"
+        Me.datelbl.Size = New System.Drawing.Size(30, 13)
+        Me.datelbl.TabIndex = 10
+        Me.datelbl.Text = "Date"
         '
-        'Label5
+        'timelbl
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(123, 46)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(30, 13)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Time"
+        Me.timelbl.AutoSize = True
+        Me.timelbl.Location = New System.Drawing.Point(123, 46)
+        Me.timelbl.Name = "timelbl"
+        Me.timelbl.Size = New System.Drawing.Size(30, 13)
+        Me.timelbl.TabIndex = 11
+        Me.timelbl.Text = "Time"
         '
-        'DateTimePicker2
+        'timebox
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(17, 46)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.ShowUpDown = True
-        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker2.TabIndex = 12
+        Me.timebox.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.timebox.Location = New System.Drawing.Point(17, 46)
+        Me.timebox.Name = "timebox"
+        Me.timebox.ShowUpDown = True
+        Me.timebox.Size = New System.Drawing.Size(100, 20)
+        Me.timebox.TabIndex = 12
         '
-        'Button1
+        'addsgrbtn
         '
-        Me.Button1.Location = New System.Drawing.Point(378, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Add Sugar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.addsgrbtn.Location = New System.Drawing.Point(378, 18)
+        Me.addsgrbtn.Name = "addsgrbtn"
+        Me.addsgrbtn.Size = New System.Drawing.Size(75, 23)
+        Me.addsgrbtn.TabIndex = 14
+        Me.addsgrbtn.Text = "Add Sugar"
+        Me.addsgrbtn.UseVisualStyleBackColor = True
         '
         'MonthCalendar1
         '
@@ -147,52 +152,64 @@ Partial Class SgrMnr
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 15
         '
-        'Panel2
+        'tpleftpane
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.TextBox3)
-        Me.Panel2.Controls.Add(Me.DateTimePicker2)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.DateTimePicker1)
-        Me.Panel2.Location = New System.Drawing.Point(31, 66)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(480, 113)
-        Me.Panel2.TabIndex = 16
+        Me.tpleftpane.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.tpleftpane.Controls.Add(Me.ratiolbl)
+        Me.tpleftpane.Controls.Add(Me.Label8)
+        Me.tpleftpane.Controls.Add(Me.crntratiobox)
+        Me.tpleftpane.Controls.Add(Me.refrshbtn)
+        Me.tpleftpane.Controls.Add(Me.timelbl)
+        Me.tpleftpane.Controls.Add(Me.sgrbox)
+        Me.tpleftpane.Controls.Add(Me.addsgrbtn)
+        Me.tpleftpane.Controls.Add(Me.insulinbox)
+        Me.tpleftpane.Controls.Add(Me.carbox)
+        Me.tpleftpane.Controls.Add(Me.timebox)
+        Me.tpleftpane.Controls.Add(Me.sugrlbl)
+        Me.tpleftpane.Controls.Add(Me.carblbl)
+        Me.tpleftpane.Controls.Add(Me.datelbl)
+        Me.tpleftpane.Controls.Add(Me.insulinlbl)
+        Me.tpleftpane.Controls.Add(Me.DateTimePicker1)
+        Me.tpleftpane.Location = New System.Drawing.Point(31, 66)
+        Me.tpleftpane.Name = "tpleftpane"
+        Me.tpleftpane.Size = New System.Drawing.Size(480, 113)
+        Me.tpleftpane.TabIndex = 16
         '
-        'Button2
+        'Label8
         '
-        Me.Button2.Location = New System.Drawing.Point(378, 69)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Refresh"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(3, 92)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(454, 13)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "using labels same as database table fields refresh button will query database and" &
+    " refresh results"
         '
-        'Label6
+        'refrshbtn
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(341, 227)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(139, 20)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "Previous Entries"
+        Me.refrshbtn.Location = New System.Drawing.Point(378, 69)
+        Me.refrshbtn.Name = "refrshbtn"
+        Me.refrshbtn.Size = New System.Drawing.Size(75, 23)
+        Me.refrshbtn.TabIndex = 15
+        Me.refrshbtn.Text = "Refresh"
+        Me.refrshbtn.UseVisualStyleBackColor = True
+        '
+        'preventrylbl
+        '
+        Me.preventrylbl.AutoSize = True
+        Me.preventrylbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.preventrylbl.Location = New System.Drawing.Point(341, 227)
+        Me.preventrylbl.Name = "preventrylbl"
+        Me.preventrylbl.Size = New System.Drawing.Size(139, 20)
+        Me.preventrylbl.TabIndex = 17
+        Me.preventrylbl.Text = "Previous Entries"
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(829, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(838, 24)
         Me.MenuStrip1.TabIndex = 18
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -206,7 +223,7 @@ Partial Class SgrMnr
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
@@ -224,16 +241,6 @@ Partial Class SgrMnr
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "display all database entries sorted by date field newest to oldest"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 92)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(454, 13)
-        Me.Label8.TabIndex = 20
-        Me.Label8.Text = "using labels same as database table fields refresh button will query database and" &
-    " refresh results"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -244,44 +251,76 @@ Partial Class SgrMnr
         Me.Label9.Text = "calendar to function as a jump to point in database by date to display that date " &
     "only"
         '
+        'resultsgrid
+        '
+        Me.resultsgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.resultsgrid.Location = New System.Drawing.Point(31, 366)
+        Me.resultsgrid.Name = "resultsgrid"
+        Me.resultsgrid.Size = New System.Drawing.Size(768, 244)
+        Me.resultsgrid.TabIndex = 21
+        '
+        'crntratiobox
+        '
+        Me.crntratiobox.Location = New System.Drawing.Point(17, 72)
+        Me.crntratiobox.Name = "crntratiobox"
+        Me.crntratiobox.Size = New System.Drawing.Size(100, 20)
+        Me.crntratiobox.TabIndex = 23
+        '
+        'ratiolbl
+        '
+        Me.ratiolbl.AutoSize = True
+        Me.ratiolbl.Location = New System.Drawing.Point(123, 74)
+        Me.ratiolbl.Name = "ratiolbl"
+        Me.ratiolbl.Size = New System.Drawing.Size(69, 13)
+        Me.ratiolbl.TabIndex = 23
+        Me.ratiolbl.Text = "Current Ratio"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
         'SgrMnr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(829, 503)
+        Me.ClientSize = New System.Drawing.Size(838, 622)
+        Me.Controls.Add(Me.resultsgrid)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.preventrylbl)
+        Me.Controls.Add(Me.tpleftpane)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SgrMnr"
         Me.Text = "Sugar Miner"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.tpleftpane.ResumeLayout(False)
+        Me.tpleftpane.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.resultsgrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents sgrbox As TextBox
+    Friend WithEvents insulinbox As TextBox
+    Friend WithEvents carbox As TextBox
+    Friend WithEvents sugrlbl As Label
+    Friend WithEvents carblbl As Label
+    Friend WithEvents insulinlbl As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Button1 As Button
+    Friend WithEvents datelbl As Label
+    Friend WithEvents timelbl As Label
+    Friend WithEvents timebox As DateTimePicker
+    Friend WithEvents addsgrbtn As Button
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents tpleftpane As Panel
+    Friend WithEvents preventrylbl As Label
+    Friend WithEvents refrshbtn As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
@@ -289,4 +328,8 @@ Partial Class SgrMnr
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents resultsgrid As DataGridView
+    Friend WithEvents ratiolbl As Label
+    Friend WithEvents crntratiobox As TextBox
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
 End Class

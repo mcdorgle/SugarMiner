@@ -1,5 +1,5 @@
 ﻿Public Class SgrMnr
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles sugrlbl.Click
 
     End Sub
 
@@ -26,5 +26,20 @@
 
     Private Sub SgrMnr_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
+        'displays ratio from setup page entered by user 
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles insulinlbl.Click
+
+    End Sub
+
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+        Dim oForm As SettingsFrm
+        oForm = New SettingsFrm()
+        oForm.Show()
+        oForm = Nothing
     End Sub
 End Class
