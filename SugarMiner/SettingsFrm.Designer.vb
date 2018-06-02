@@ -25,8 +25,8 @@ Partial Class SettingsFrm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SettingsFrm))
         Me.SettingsOKBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RatioBoxSt = New System.Windows.Forms.TextBox()
         Me.RatioSet = New System.Windows.Forms.Label()
+        Me.RatioBoxSt = New System.Windows.Forms.MaskedTextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,13 +53,6 @@ Partial Class SettingsFrm
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(107, 52)
         Me.TableLayoutPanel1.TabIndex = 1
         '
-        'RatioBoxSt
-        '
-        Me.RatioBoxSt.Location = New System.Drawing.Point(3, 29)
-        Me.RatioBoxSt.Name = "RatioBoxSt"
-        Me.RatioBoxSt.Size = New System.Drawing.Size(100, 20)
-        Me.RatioBoxSt.TabIndex = 2
-        '
         'RatioSet
         '
         Me.RatioSet.AutoSize = True
@@ -69,6 +62,17 @@ Partial Class SettingsFrm
         Me.RatioSet.TabIndex = 3
         Me.RatioSet.Text = "Your Insulin Ratio"
         Me.RatioSet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'RatioBoxSt
+        '
+        Me.RatioBoxSt.Location = New System.Drawing.Point(3, 29)
+        Me.RatioBoxSt.Mask = "00"
+        Me.RatioBoxSt.Name = "RatioBoxSt"
+        Me.RatioBoxSt.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.RatioBoxSt.Size = New System.Drawing.Size(100, 20)
+        Me.RatioBoxSt.TabIndex = 2
+        Me.RatioBoxSt.Text = "2"
+        Me.RatioBoxSt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'SettingsFrm
         '
@@ -88,6 +92,6 @@ Partial Class SettingsFrm
 
     Friend WithEvents SettingsOKBtn As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents RatioBoxSt As TextBox
     Friend WithEvents RatioSet As Label
+    Friend WithEvents RatioBoxSt As MaskedTextBox
 End Class

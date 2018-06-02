@@ -56,21 +56,21 @@ Partial Class SgrMnr
         Me.sgrbox.Location = New System.Drawing.Point(193, 20)
         Me.sgrbox.Name = "sgrbox"
         Me.sgrbox.Size = New System.Drawing.Size(100, 20)
-        Me.sgrbox.TabIndex = 3
+        Me.sgrbox.TabIndex = 1
         '
         'insulinbox
         '
         Me.insulinbox.Location = New System.Drawing.Point(193, 69)
         Me.insulinbox.Name = "insulinbox"
         Me.insulinbox.Size = New System.Drawing.Size(100, 20)
-        Me.insulinbox.TabIndex = 4
+        Me.insulinbox.TabIndex = 3
         '
         'carbox
         '
         Me.carbox.Location = New System.Drawing.Point(193, 43)
         Me.carbox.Name = "carbox"
         Me.carbox.Size = New System.Drawing.Size(100, 20)
-        Me.carbox.TabIndex = 5
+        Me.carbox.TabIndex = 2
         '
         'sugrlbl
         '
@@ -105,7 +105,7 @@ Partial Class SgrMnr
         Me.DateTimePicker1.Location = New System.Drawing.Point(17, 20)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.DateTimePicker1.TabIndex = 6
         '
         'datelbl
         '
@@ -132,7 +132,7 @@ Partial Class SgrMnr
         Me.timebox.Name = "timebox"
         Me.timebox.ShowUpDown = True
         Me.timebox.Size = New System.Drawing.Size(100, 20)
-        Me.timebox.TabIndex = 12
+        Me.timebox.TabIndex = 7
         '
         'addsgrbtn
         '
@@ -140,7 +140,7 @@ Partial Class SgrMnr
         Me.addsgrbtn.Name = "addsgrbtn"
         Me.addsgrbtn.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.addsgrbtn.Size = New System.Drawing.Size(75, 23)
-        Me.addsgrbtn.TabIndex = 14
+        Me.addsgrbtn.TabIndex = 4
         Me.addsgrbtn.Text = "Add"
         Me.addsgrbtn.UseVisualStyleBackColor = True
         '
@@ -196,15 +196,17 @@ Partial Class SgrMnr
         '
         Me.crntratiobox.Location = New System.Drawing.Point(17, 72)
         Me.crntratiobox.Name = "crntratiobox"
+        Me.crntratiobox.ReadOnly = True
         Me.crntratiobox.Size = New System.Drawing.Size(100, 20)
         Me.crntratiobox.TabIndex = 23
+        Me.crntratiobox.TabStop = False
         '
         'refrshbtn
         '
         Me.refrshbtn.Location = New System.Drawing.Point(378, 69)
         Me.refrshbtn.Name = "refrshbtn"
         Me.refrshbtn.Size = New System.Drawing.Size(75, 23)
-        Me.refrshbtn.TabIndex = 15
+        Me.refrshbtn.TabIndex = 5
         Me.refrshbtn.Text = "Refresh"
         Me.refrshbtn.UseVisualStyleBackColor = True
         '
@@ -237,13 +239,13 @@ Partial Class SgrMnr
         'SettingsToolStripMenuItem1
         '
         Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
-        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.SettingsToolStripMenuItem1.Text = "Settings"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
