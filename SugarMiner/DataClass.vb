@@ -14,6 +14,6 @@ Public Class DataClass
         Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
         Dim ratio = dbCommand.ExecuteScalar()
-
+        Return ratio
     End Function
 End Class
