@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClass.vb" />
     <Compile Include="SettingsFrm.Designer.vb">
       <DependentUpon>SettingsFrm.vb</DependentUpon>
     </Compile>

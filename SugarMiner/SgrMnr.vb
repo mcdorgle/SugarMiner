@@ -4,6 +4,9 @@
 'also working on bluetooth capabilities for MedTronic insulin pump systems
 Imports System.Data.SQLite
 
+
+
+
 Public Class SgrMnr
     Private conn As SQLiteConnection
 
