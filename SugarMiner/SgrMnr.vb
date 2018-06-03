@@ -9,6 +9,8 @@ Imports System.Data.SQLite
 
 
 Public Class SgrMnr
+    Private dataset = New DataClass()
+
     Private conn As SQLiteConnection
 
     Protected Overrides Sub Finalize()
@@ -27,43 +29,14 @@ Public Class SgrMnr
     End Sub
 
     Private Sub SgrMnr_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conn = New SQLiteConnection("Data Source=SugarDB.sqlite;Version=3")
-        conn.Open()
 
-        createDatabase()
-        getRatio()
 
-        Dim sql = "SELECT * FROM Sugars order by datetime desc"
-        Dim dbCommand = New SQLiteCommand(sql, conn)
 
-        Dim reader As SQLiteDataReader = dbCommand.ExecuteReader()
         list1.Items.Clear()
         While (reader.Read())
             list1.Items.Add("Date:  " & reader("datetime") & "   Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
         End While
-    End Sub
 
-    Private Sub createDatabase()
-        createSugarsTable()
-        createSettingsTable()
-    End Sub
-
-    Private Sub createSugarsTable()
-        Dim sql As String = "CREATE TABLE IF NOT EXISTS Sugars (sugar INT, carbs INT, insulin INT, datetime STRING)"
-        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
-        dbCommand.ExecuteNonQuery()
-    End Sub
-
-    ' Create the settings table if it doesn't exist and initialize
-    Private Sub createSettingsTable()
-        Dim sql As String = "CREATE TABLE IF NOT EXISTS Settings (name TEXT, value TEXT)"
-        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
-        Dim tableCreated = dbCommand.ExecuteNonQuery() = 0
-        If tableCreated Then
-            sql = "INSERT INTO Settings (name, value) values ('ratio', '1')"
-            dbCommand.CommandText = sql
-            dbCommand.ExecuteNonQuery()
-        End If
     End Sub
 
     'get the ratio value from database
@@ -71,7 +44,7 @@ Public Class SgrMnr
         Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
         Dim ratio = dbCommand.ExecuteScalar()
-        crntratiobox.Text = ratio & ":1"
+        crntratiobox.Text = dataset.getRatio()
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
@@ -93,10 +66,7 @@ Public Class SgrMnr
     End Sub
 
     Private Sub refreshResults()
-        Dim sql = "SELECT * FROM Sugars order by datetime desc"
-        Dim dbCommand = New SQLiteCommand(sql, conn)
 
-        Dim reader As SQLiteDataReader = dbCommand.ExecuteReader()
         list1.Items.Clear()
         While (reader.Read())
             list1.Items.Add("Date:  " & reader("datetime") & "   Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))

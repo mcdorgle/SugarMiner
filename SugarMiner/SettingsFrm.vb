@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SQLite
 Public Class SettingsFrm
     Private conn As SQLiteConnection
+    Private dataset As DataClass
 
     Public Sub New(conn As SQLiteConnection)
 
@@ -33,10 +34,7 @@ Public Class SettingsFrm
     End Sub
 
     Private Sub SettingsFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
-        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
-        Dim ratio = dbCommand.ExecuteScalar()
-        RatioBoxSt.Text = ratio
+        RatioBoxSt.Text = dataset.getRatio()
 
 
     End Sub
