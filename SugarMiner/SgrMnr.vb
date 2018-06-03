@@ -1,6 +1,7 @@
-﻿'Sugar Miner developed by Deshi McDorgle for diabetics to more closely monitor blood sugar levels when using an insulin to carb ratio rather than sliding scale
+﻿'Sugar Miner developed by Deshi McDorgle for diabetics to more closely monitor blood sugar levels when using an insulin
+'to carb ratio rather than sliding scale
 'program is not yet functional
-'I sit on freenode irc #web-social and #thelair
+'I sit on freenode irc #web-social and ##thelair
 'also working on bluetooth capabilities for MedTronic insulin pump systems
 Imports System.Data.SQLite
 
@@ -65,11 +66,12 @@ Public Class SgrMnr
         End If
     End Sub
 
+    'get the ratio value from database
     Private Sub getRatio()
         Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
         Dim ratio = dbCommand.ExecuteScalar()
-        crntratiobox.Text = ratio & ":1"
+        crntratiobox.Text = DataClass.ratio & ":1"
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
