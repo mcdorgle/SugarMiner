@@ -71,7 +71,7 @@ Public Class SgrMnr
         Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
         Dim ratio = dbCommand.ExecuteScalar()
-        crntratiobox.Text = DataClass.ratio & ":1"
+        crntratiobox.Text = ratio & ":1"
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
