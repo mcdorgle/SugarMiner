@@ -28,6 +28,15 @@ Public Class SgrMnr
 
         createDatabase()
         getRatio()
+
+        Dim sql = "SELECT * FROM Sugars order by datetime desc"
+        Dim dbCommand = New SQLiteCommand(sql, conn)
+
+        Dim reader As SQLiteDataReader = dbCommand.ExecuteReader()
+        list1.Items.Clear()
+        While (reader.Read())
+            list1.Items.Add("Date:  " & reader("datetime") & "   Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
+        End While
     End Sub
 
     Private Sub createDatabase()
@@ -57,10 +66,11 @@ Public Class SgrMnr
         Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
         Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
         Dim ratio = dbCommand.ExecuteScalar()
-        crntratiobox.Text = ratio
+        crntratiobox.Text = ratio & ":1"
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
+
         'displays ratio from settings page entered by user  not sure what type of object this should be it should not be an editable field on main form only in the settings form
     End Sub
 

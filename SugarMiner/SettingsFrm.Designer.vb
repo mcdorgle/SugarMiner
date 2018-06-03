@@ -25,8 +25,8 @@ Partial Class SettingsFrm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SettingsFrm))
         Me.SettingsOKBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RatioSet = New System.Windows.Forms.Label()
         Me.RatioBoxSt = New System.Windows.Forms.MaskedTextBox()
+        Me.RatioSet = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,16 +53,6 @@ Partial Class SettingsFrm
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(107, 52)
         Me.TableLayoutPanel1.TabIndex = 1
         '
-        'RatioSet
-        '
-        Me.RatioSet.AutoSize = True
-        Me.RatioSet.Location = New System.Drawing.Point(3, 0)
-        Me.RatioSet.Name = "RatioSet"
-        Me.RatioSet.Size = New System.Drawing.Size(90, 13)
-        Me.RatioSet.TabIndex = 3
-        Me.RatioSet.Text = "Your Insulin Ratio"
-        Me.RatioSet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'RatioBoxSt
         '
         Me.RatioBoxSt.Location = New System.Drawing.Point(3, 29)
@@ -73,6 +63,16 @@ Partial Class SettingsFrm
         Me.RatioBoxSt.TabIndex = 2
         Me.RatioBoxSt.Text = "2"
         Me.RatioBoxSt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'RatioSet
+        '
+        Me.RatioSet.AutoSize = True
+        Me.RatioSet.Location = New System.Drawing.Point(3, 0)
+        Me.RatioSet.Name = "RatioSet"
+        Me.RatioSet.Size = New System.Drawing.Size(90, 13)
+        Me.RatioSet.TabIndex = 3
+        Me.RatioSet.Text = "Your Insulin Ratio"
+        Me.RatioSet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SettingsFrm
         '
