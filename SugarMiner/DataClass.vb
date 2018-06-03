@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SQLite
+
+
+
 Public Class DataClass
 
     Private conn As SQLiteConnection
@@ -7,9 +10,10 @@ Public Class DataClass
         conn.Close()
     End Sub
 
-    Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
-    Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
-    Dim ratio = dbCommand.ExecuteScalar()
+    Public Function getRatio() As Integer
+        Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
+        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
+        Dim ratio = dbCommand.ExecuteScalar()
 
-
+    End Function
 End Class
