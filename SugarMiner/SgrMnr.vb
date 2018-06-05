@@ -3,19 +3,9 @@
 'program is not yet functional
 'I sit on freenode irc #web-social and ##thelair
 'also working on bluetooth capabilities for MedTronic insulin pump systems
-Imports System.Data.SQLite
-
-
-
 
 Public Class SgrMnr
-    Private dataset = New DataClass()
-
-    Private conn As SQLiteConnection
-
-    Protected Overrides Sub Finalize()
-        conn.Close()
-    End Sub
+    Private dataset As DataClass
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Dim oForm As Aboutfrm
@@ -29,35 +19,21 @@ Public Class SgrMnr
     End Sub
 
     Private Sub SgrMnr_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-        list1.Items.Clear()
-        While (reader.Read())
-            list1.Items.Add("Date:  " & reader("datetime") & "   Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
-        End While
-
-    End Sub
-
-    'get the ratio value from database
-    Private Sub getRatio()
-        Dim sql As String = "SELECT value from Settings WHERE name='ratio'"
-        Dim dbCommand As SQLiteCommand = New SQLiteCommand(sql, conn)
-        Dim ratio = dbCommand.ExecuteScalar()
+        dataset = New DataClass()
         crntratiobox.Text = dataset.getRatio()
+        refreshResults()
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles crntratiobox.TextChanged
-
         'displays ratio from settings page entered by user  not sure what type of object this should be it should not be an editable field on main form only in the settings form
     End Sub
 
     Private Sub SettingsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem1.Click
         Dim oForm As SettingsFrm
-        oForm = New SettingsFrm(conn)
+        oForm = New SettingsFrm(dataset)
         oForm.ShowDialog()
         oForm = Nothing
-        getRatio()
+        crntratiobox.Text = dataset.getRatio()
     End Sub
 
     Private Sub refrshbtn_Click(sender As Object, e As EventArgs) Handles refrshbtn.Click
@@ -66,11 +42,11 @@ Public Class SgrMnr
     End Sub
 
     Private Sub refreshResults()
-
         list1.Items.Clear()
-        While (reader.Read())
-            list1.Items.Add("Date:  " & reader("datetime") & "   Sugar:  " & reader("sugar") & "   Carbs:  " & reader("carbs") & "   Insulin:  " & reader("insulin"))
-        End While
+        For Each sugars In dataset.getSugars()
+            Dim line = "Date:  {0}   Sugar:  {1}   Carbs:  {2}   Insulin:  {3}"
+            list1.Items.Add(String.Format(line, sugars.datetime, sugars.sugar, sugars.carbs, sugars.insulin))
+        Next
     End Sub
 
     Private Sub addsgrbtn_Click(sender As Object, e As EventArgs) Handles addsgrbtn.Click
@@ -78,14 +54,15 @@ Public Class SgrMnr
 
         'values need to be entered from input boxes from date, time, sugar, carbs, insulin
         'ratio value is entered on settings form and the display box should only show the most recent ratio that was entered into settings
-        Dim sugars As Integer = Integer.Parse(sgrbox.Text)
-        Dim carbs As Integer = Integer.Parse(carbox.Text)
-        Dim insulin As Integer = Integer.Parse(insulinbox.Text)
-        Dim datetime As String = DateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff")
-
-        Dim sql = "INSERT INTO Sugars (sugar, carbs, insulin, datetime) values ({0}, {1}, {2}, '{3}')"
-        Dim dbCommand = New SQLiteCommand(String.Format(sql, sugars, carbs, insulin, datetime), conn)
-        dbCommand.ExecuteNonQuery()
+        Try
+            Dim sugars = New Sugars()
+            sugars.sugar = Integer.Parse(sgrbox.Text)
+            sugars.carbs = Integer.Parse(carbox.Text)
+            sugars.insulin = Integer.Parse(insulinbox.Text)
+            sugars.datetime = DateTimePicker1.Value
+            dataset.addSugars(sugars)
+        Catch ex As Exception
+        End Try
         refreshResults()
         'end product needs to have all results displayed in a nice table/grid ordered by date/time not sure how to do that yet
     End Sub
