@@ -46,9 +46,10 @@ Partial Class SgrMnr
         Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.list1 = New System.Windows.Forms.ListBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tpleftpane.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sgrbox
@@ -214,7 +215,7 @@ Partial Class SgrMnr
         '
         Me.preventrylbl.AutoSize = True
         Me.preventrylbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.preventrylbl.Location = New System.Drawing.Point(329, 243)
+        Me.preventrylbl.Location = New System.Drawing.Point(220, 243)
         Me.preventrylbl.Name = "preventrylbl"
         Me.preventrylbl.Size = New System.Drawing.Size(76, 20)
         Me.preventrylbl.TabIndex = 17
@@ -254,23 +255,23 @@ Partial Class SgrMnr
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'list1
+        'DataGridView1
         '
-        Me.list1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.list1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.list1.FormattingEnabled = True
-        Me.list1.ItemHeight = 20
-        Me.list1.Location = New System.Drawing.Point(31, 266)
-        Me.list1.Name = "list1"
-        Me.list1.Size = New System.Drawing.Size(768, 344)
-        Me.list1.TabIndex = 21
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(31, 266)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(480, 219)
+        Me.DataGridView1.TabIndex = 22
         '
         'SgrMnr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 622)
-        Me.Controls.Add(Me.list1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.preventrylbl)
         Me.Controls.Add(Me.tpleftpane)
         Me.Controls.Add(Me.MonthCalendar1)
@@ -283,6 +284,7 @@ Partial Class SgrMnr
         Me.tpleftpane.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -310,5 +312,5 @@ Partial Class SgrMnr
     Friend WithEvents ratiolbl As Label
     Friend WithEvents crntratiobox As TextBox
     Friend WithEvents SettingsToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents list1 As ListBox
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

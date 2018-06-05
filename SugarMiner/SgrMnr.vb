@@ -42,11 +42,24 @@ Public Class SgrMnr
     End Sub
 
     Private Sub refreshResults()
-        list1.Items.Clear()
-        For Each sugars In dataset.getSugars()
-            Dim line = "Date:  {0}   Sugar:  {1}   Carbs:  {2}   Insulin:  {3}"
-            list1.Items.Add(String.Format(line, sugars.datetime, sugars.sugar, sugars.carbs, sugars.insulin))
+        Dim dt As New DataTable()
+        dt.Columns.AddRange(
+        {
+            New DataColumn("Sugar", GetType(Integer)),
+            New DataColumn("Carbs", GetType(Integer)),
+            New DataColumn("Insulin", GetType(Integer)),
+            New DataColumn("Date Time")
+        })
+        For Each sugar In dataset.getSugars()
+            Dim row = dt.NewRow
+            row.Item(0) = sugar.sugar
+            row.Item(1) = sugar.carbs
+            row.Item(2) = sugar.insulin
+            row.Item(3) = sugar.datetime.ToString
+            dt.Rows.Add(row)
         Next
+        DataGridView1.DataSource = dt
+        DataGridView1.Sort(DataGridView1.Columns(3), System.ComponentModel.ListSortDirection.Descending)
     End Sub
 
     Private Sub addsgrbtn_Click(sender As Object, e As EventArgs) Handles addsgrbtn.Click
