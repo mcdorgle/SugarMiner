@@ -27,6 +27,7 @@ Partial Class SettingsFrm
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.RatioBoxSt = New System.Windows.Forms.MaskedTextBox()
         Me.RatioSet = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,15 +48,16 @@ Partial Class SettingsFrm
         Me.TableLayoutPanel1.Controls.Add(Me.RatioSet, 0, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(31, 12)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(107, 52)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'RatioBoxSt
         '
-        Me.RatioBoxSt.Location = New System.Drawing.Point(3, 29)
+        Me.RatioBoxSt.Location = New System.Drawing.Point(3, 19)
         Me.RatioBoxSt.Mask = "00"
         Me.RatioBoxSt.Name = "RatioBoxSt"
         Me.RatioBoxSt.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
@@ -74,6 +76,15 @@ Partial Class SettingsFrm
         Me.RatioSet.Text = "Your Insulin Ratio"
         Me.RatioSet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(148, 26)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Enter only the first number" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " :1 will be added automatically"
+        '
         'SettingsFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -81,12 +92,14 @@ Partial Class SettingsFrm
         Me.ClientSize = New System.Drawing.Size(178, 120)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.SettingsOKBtn)
+        Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SettingsFrm"
         Me.Text = "Settings"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -94,4 +107,5 @@ Partial Class SettingsFrm
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents RatioSet As Label
     Friend WithEvents RatioBoxSt As MaskedTextBox
+    Friend WithEvents Label1 As Label
 End Class
