@@ -20,7 +20,7 @@ Public Class SgrMnr
 
     Private Sub SgrMnr_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dataset = New DataClass()
-        crntratiobox.Text = dataset.getRatio()
+        crntratiobox.Text = dataset.getRatio() & ":1"
         refreshResults()
     End Sub
 
